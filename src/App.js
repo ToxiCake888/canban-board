@@ -4,17 +4,19 @@ import './styles/App.css';
 function App() {
   return (
     <div className="App">
-      <div className="header appChild">
+      <div className="header">
         <button className="newCard" onClick={handleNewCard}>add card</button>
-      </div>
-      <div className="aside appChild">
-      <button className="switchTable">switch table</button>
+      </div >
+      <div className="aside">
+        <button className="asideButton" onclick='document.location="./registration.html"'>Registration</button>
+        <button className="asideButton">Log in</button>
+        <button className="asideButton">switch table</button>
       </div>
       <div className="appChild" id='body'>
         
       </div>
       
-      <div className="footer appChild">footer</div>
+      {/* <div className="footer appChild">footer</div> */}
       
     </div>
   );
@@ -37,7 +39,7 @@ function handleNewCard(){
   taskTitle.className="taskTitle";
   cardContent.className="cardContent";
   addTaskContent.className="addTaskContent";
-  addTaskContent.addEventListener('click', () => addCardDescription(cardContent));
+  addTaskContent.addEventListener('click', () => addCardDescription(cardContent));        //addCardDeescription тут ранее как заглушка
   card.className="card";
   
   table.appendChild(card);
@@ -48,7 +50,9 @@ function handleNewCard(){
   return console.log("clicked");
 };
 
+function openCardMenu(){
 
+};
 
 function addCardDescription(cardContent) {
   // Создаем новый элемент input
